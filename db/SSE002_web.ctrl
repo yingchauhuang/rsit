@@ -1,0 +1,20 @@
+LOAD DATA
+INFILE 'SSE_Update_web.txt'
+BADFILE 'SSE002_web.bad'
+DISCARDFILE 'SSE002_web.desc'
+APPEND
+INTO TABLE SSE002
+FIELDS TERMINATED BY ','
+(
+tDate TIMESTAMP "YYYY/MM/DD",
+Symbol ,
+tOpen "to_number(:tOpen,'9999999999.9999')",
+tHigh "to_number(:tHigh,'9999999999.9999')",
+tLow "to_number(:tLow,'9999999999.9999')",
+tClose "to_number(:tClose,'9999999999.9999')",
+tLastBuy "to_number(:tClose,'9999999999.9999')", 
+tLasySell "to_number(:tClose,'9999999999.9999')",
+tVolume ,
+tAmount TERMINATED BY WHITESPACE
+)
+

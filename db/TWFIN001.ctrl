@@ -1,0 +1,50 @@
+LOAD DATA
+INFILE 'TWFinNew.txt'
+BADFILE 'TWFIN001.bad'
+DISCARDFILE 'TWFIN001.desc'
+APPEND
+INTO TABLE TWFIN001
+FIELDS TERMINATED BY ','
+TRAILING NULLCOLS
+(
+  Symbol,
+  FinDate TIMESTAMP "YYYY-MM-DD HH24:MI:SS.ff",
+  YearDate TIMESTAMP "YYYY-MM-DD HH24:MI:SS.ff",
+  AnnDate TIMESTAMP "YYYY-MM-DD HH24:MI:SS.ff",
+  F1 "to_number(:F1,'9999999999.9999')",
+  F2 "to_number(:F2,'9999999999.9999')",
+  F3 "to_number(:F3,'9999999999.9999')",
+  F4 "to_number(:F4,'9999999999.9999')",
+  F5 "to_number(:F5,'9999999999.9999')",
+  F6 "to_number(:F6,'9999999999.9999')",
+  F7 "to_number(:F7,'9999999999.9999')",
+  F8 "to_number(:F8,'9999999999.9999')",
+  F9 "to_number(:F9,'9999999999.9999')",
+  F10 "to_number(:F10,'9999999999.9999')",
+  F11 "to_number(:F11,'9999999999.9999')",
+  F12 "to_number(:F12,'9999999999.9999')",
+  F13 "to_number(:F13,'9999999999.9999')",
+  F14 NULLIF F14=BLANKS
+      "to_number(:F14,'9999999999.9999')",
+  F15 "to_number(:F15,'9999999999.9999')",
+  F16 "to_number(:F16,'9999999999.9999')",
+  F17 "to_number(:F17,'9999999999.9999')",
+  F18 "to_number(:F18,'9999999999.9999')",
+  F19 "to_number(:F19,'9999999999.9999')",
+  F20 "to_number(:F20,'9999999999.9999')",
+  F21 "to_number(:F21,'9999999999.9999')",
+  F22 "to_number(:F22,'9999999999.9999')",
+  F23 "to_number(:F23,'9999999999.9999')",
+  F24 "to_number(:F24,'9999999999.9999')",
+  F25 "to_number(:F25,'9999999999.9999')",
+  F26 "to_number(:F26,'9999999999.9999')",
+  F27 "to_number(:F27,'9999999999.9999')",
+  F28 "to_number(:F28,'9999999999.9999')",
+  F29 NULLIF F14=BLANKS
+      "to_number(:F29,'9999999999.9999')",
+  F30 NULLIF F14=BLANKS
+      "to_number(:F29,'9999999999.9999')"
+      )
+
+
+

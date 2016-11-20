@@ -1,0 +1,19 @@
+LOAD DATA
+INFILE 'HKD_Update_web.txt'
+BADFILE 'HK002_web.bad'
+DISCARDFILE 'HK002_web.desc'
+APPEND
+INTO TABLE HK002
+FIELDS TERMINATED BY ','
+TRAILING NULLCOLS
+(
+tDate TIMESTAMP "YYYY/MM/DD",
+Symbol ,
+tOpen "to_number(:tOpen,'9999999999.9999')",
+tHigh "to_number(:tHigh,'9999999999.9999')",
+tLow "to_number(:tLow,'9999999999.9999')",
+tClose "to_number(:tClose,'9999999999.9999')",
+tVolume
+)
+
+

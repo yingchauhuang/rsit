@@ -1,0 +1,16 @@
+truncate table XQ.FIN001;
+truncate table XQ.HK001;
+truncate table XQ.HK002;
+truncate table XQ.HK003;
+truncate table XQ.HK_Capital;
+truncate table XQ.TWFIN001;
+truncate table XQ.TW001;
+truncate table XQ.TWFIN001;
+truncate table XQ.TWFIN001B;
+truncate table XQ.TW_Capital;
+truncate table XQ.TW003;
+truncate table XQ.SSE001;
+truncate table XQ.SZSE001;
+truncate table XQ.CN_Capital;
+commit;
+exit;

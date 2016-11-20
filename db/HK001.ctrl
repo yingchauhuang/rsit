@@ -1,0 +1,21 @@
+LOAD DATA
+CHARACTERSET ZHT16BIG5
+INFILE 'HK.txt'
+BADFILE 'HK001.bad'
+DISCARDFILE 'HK001.desc'
+APPEND
+INTO TABLE HK001
+FIELDS TERMINATED BY ','
+OPTIONALLY ENCLOSED BY '"'
+TRAILING NULLCOLS
+(
+  Symbol,
+  Market,
+  Name,
+  SName,
+  CUR,
+  Unit,
+  EName,
+  SEName,
+  UPD_Date "to_char(sysdate,'YYYYMMDD')",
+  UPD_Time "to_char(sysdate,'HHMISS')")

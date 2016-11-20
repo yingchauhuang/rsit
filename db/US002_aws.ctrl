@@ -1,0 +1,17 @@
+LOAD DATA
+INFILE 'USW_Update.txt'
+BADFILE 'US002_aws.bad'
+DISCARDFILE 'US002_aws.desc'
+APPEND
+INTO TABLE US002
+FIELDS TERMINATED BY ','
+(
+tDate TIMESTAMP "YYYY-MM-DD HH24:MI:SS.ff",
+Symbol ,
+tOpen "to_number(:tOpen,'9999999999.9999')",
+tHigh "to_number(:tHigh,'9999999999.9999')",
+tLow "to_number(:tLow,'9999999999.9999')",
+tClose "to_number(:tClose,'9999999999.9999')",
+tVolume_STR
+)
+

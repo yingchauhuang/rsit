@@ -1,0 +1,23 @@
+LOAD DATA
+CHARACTERSET ZHT16BIG5
+INFILE 'US.txt'
+BADFILE 'US001.bad'
+DISCARDFILE 'US001.desc'
+APPEND
+INTO TABLE US001
+FIELDS TERMINATED BY ','
+OPTIONALLY ENCLOSED BY '"'
+TRAILING NULLCOLS
+(
+  Symbol,
+  Market,
+  SName,
+  Name,
+  CUR,
+  Unit,
+  Price,
+  EName,
+  SEName,
+  tDate,
+  empty)
+

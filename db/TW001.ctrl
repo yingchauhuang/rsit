@@ -1,0 +1,23 @@
+LOAD DATA
+CHARACTERSET ZHT16BIG5
+INFILE 'TW.txt'
+BADFILE 'TW001.bad'
+DISCARDFILE 'TW001.desc'
+APPEND
+INTO TABLE TW001
+FIELDS TERMINATED BY ','
+OPTIONALLY ENCLOSED BY '"'
+TRAILING NULLCOLS
+(
+  Symbol,
+  Market,
+  Name,
+  SName,
+  CUR,
+  Unit,
+  Category,
+  SEName,
+  EName,
+  UPD_Date "to_char(sysdate,'YYYYMMDD')",
+  UPD_Time "to_char(sysdate,'HHMISS')")
+
