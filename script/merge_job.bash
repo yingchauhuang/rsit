@@ -76,7 +76,7 @@ sqlplus -s -l $Oracle_User/$Oracle_PWD "@Sync_CN.sql"
 
 currenMD=$(date +"%m-%d")
 echo $currenMD
-if [ "$currenMD" == "03-31" ] || [ "$currenMD" == "04-01" ] || [ "$currenMD" == "04-06" ] || [  "$currenMD" == "02-01" ]  || [ "$currenMD" == "02-02" ]|| [  "$currenMD" == "02-03" ]|| [ "$currenMD" == "05-16" ] || [ "$currenMD" == "05-17" ] || [  "$currenMD" == "05-18" ] || [  "$currenMD" == "05-19" ] || [  "$currenMD" == "08-16" ] || [  "$currenMD" == "08-17" ] || [  "$currenMD" == "08-18" ]  || [  "$currenMD" == "08-19" ]
+if [ "$currenMD" == "03-31" ] || [ "$currenMD" == "04-01" ] || [ "$currenMD" == "04-06" ] || [  "$currenMD" == "02-01" ]  || [ "$currenMD" == "02-02" ]|| [  "$currenMD" == "02-03" ]|| [ "$currenMD" == "05-16" ] || [ "$currenMD" == "05-17" ] || [  "$currenMD" == "05-18" ] || [  "$currenMD" == "05-19" ] || [ "$currenMD" == "05-20" ] || [  "$currenMD" == "05-21" ] || [  "$currenMD" == "05-22" ] || [  "$currenMD" == "08-16" ] || [  "$currenMD" == "08-17" ] || [  "$currenMD" == "08-18" ]  || [  "$currenMD" == "08-19" ] || [ "$currenMD" == "08-20" ] || [  "$currenMD" == "08-21" ] || [  "$currenMD" == "08-22" ] || [  "$currenMD" == "11-16" ] || [  "$currenMD" == "11-17" ] || [  "$currenMD" == "11-18" ]  || [  "$currenMD" == "11-19" ] || [ "$currenMD" == "11-20" ] || [  "$currenMD" == "11-21" ] || [  "$currenMD" == "11-22" ] 
 then
 	echo "Update Finance Date !!!"
         sqlplus -s -l $Oracle_User/$Oracle_PWD "@Update_Fin_TW.sql"
